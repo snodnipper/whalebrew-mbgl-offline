@@ -10,3 +10,7 @@ RUN apt-get update \
     && curl -o ca-bundle.crt https://curl.haxx.se/ca/cacert-2017-01-18.pem \
     && make offline
 
+LABEL io.whalebrew.name mbgl-offline 
+LABEL io.whalebrew.config.volumes '["~/:/root/"]'
+WORKDIR /mapbox-gl-native
+ENTRYPOINT ["./build/linux-x86_64/Debug/mbgl-offline"]
