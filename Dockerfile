@@ -11,6 +11,6 @@ RUN apt-get update \
     && make offline
 
 LABEL io.whalebrew.name mbgl-offline 
-LABEL io.whalebrew.config.volumes '["~/:/root/"]'
+# LABEL io.whalebrew.config.volumes '["~/:/root/"]'
 WORKDIR /mapbox-gl-native
-ENTRYPOINT ["./build/linux-x86_64/Debug/mbgl-offline"]
+ENTRYPOINT ["/mapbox-gl-native/build/linux-x86_64/Debug/mbgl-offline"]
