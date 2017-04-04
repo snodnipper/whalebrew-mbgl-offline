@@ -21,4 +21,4 @@ RUN apt-get update \
     
 LABEL io.whalebrew.name mbgl-offline
 
-ENTRYPOINT ["/mapbox-gl-native/build/linux-x86_64/Debug/mbgl-offline"]
+ENTRYPOINT ["/mbgl-offline"]
